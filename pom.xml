@@ -36,9 +36,16 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<!-- spring boot开发web -->
 		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-web</artifactId>
+ 		</dependency>
+ 		
+ 		<!-- spring boot 官方开发模板thymeleaf，也就是jsp样的展示 -->
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
  		</dependency>
 	</dependencies>
 
