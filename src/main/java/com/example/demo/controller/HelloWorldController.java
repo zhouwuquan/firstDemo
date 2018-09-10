@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +17,12 @@ public class HelloWorldController {
 	@Value("${content}")
 	private String content;
 	
+	@Autowired
+	private GrilProperties grilProperties;
+	
 	@RequestMapping("/hello")
     public String index() {
 		System.out.println("1111111111111111111111111111");
-        return content;
+        return grilProperties.getCupSize()+"=="+grilProperties.getAge();
     }
 }
